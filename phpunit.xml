@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.2/phpunit.xsd" backupGlobals="false" colors="true" bootstrap="vendor/autoload.php" cacheDirectory=".phpunit.cache">
+  <!-- Configuración de los directorios de pruebas -->
+  <testsuites>
+    <testsuite name="Unit Tests">
+      <directory suffix="Test.php">tests/Unit</directory>
+    </testsuite>
+    <testsuite name="Feature Tests">
+      <directory suffix="Test.php">tests/Feature</directory>
+    </testsuite>
+  </testsuites>
+  <!-- Configuración para generar reportes de cobertura -->
+  <source>
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+  </source>
+</phpunit>

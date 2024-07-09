@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\Users\JORGE\Desktop\Proyecto\src\Libraries\phpqrcode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../_css/bootstrap.min.css?v=11.0.3" rel="stylesheet" type="text/css">
+  <link href="../../_css/nv.d3.min.css?v=11.0.3" rel="stylesheet" type="text/css">
+  <link href="../../_css/style.css?v=11.0.3" rel="stylesheet" type="text/css">
+  <link href="../../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../../index.html">C:\Users\JORGE\Desktop\Proyecto\src</a></li>
+         <li class="breadcrumb-item"><a href="../index.html">Libraries</a></li>
+         <li class="breadcrumb-item"><a href="index.html">phpqrcode</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="qrencode.php.html#156">QRcode</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrconst.php.html#50">qrstr</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrtools.php.html#25">QRtools</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#42">QRspec</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrimage.php.html#27">QRimage</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#31">QRinputItem</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#274">QRinput</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrbitstream.php.html#28">QRbitstream</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrsplit.php.html#33">QRsplit</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrrscode.php.html#31">QRrsItem</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrrscode.php.html#187">QRrs</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#33">QRmask</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#28">QRrsblock</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#47">QRrawcode</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#306">FrameFiller</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#396">QRencode</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="qrinput.php.html#274">QRinput</a></td><td class="text-right">9506</td></tr>
+       <tr><td><a href="qrmask.php.html#33">QRmask</a></td><td class="text-right">5112</td></tr>
+       <tr><td><a href="qrspec.php.html#42">QRspec</a></td><td class="text-right">4830</td></tr>
+       <tr><td><a href="qrsplit.php.html#33">QRsplit</a></td><td class="text-right">4160</td></tr>
+       <tr><td><a href="qrinput.php.html#31">QRinputItem</a></td><td class="text-right">1560</td></tr>
+       <tr><td><a href="qrtools.php.html#25">QRtools</a></td><td class="text-right">756</td></tr>
+       <tr><td><a href="qrrscode.php.html#31">QRrsItem</a></td><td class="text-right">702</td></tr>
+       <tr><td><a href="qrbitstream.php.html#28">QRbitstream</a></td><td class="text-right">650</td></tr>
+       <tr><td><a href="qrencode.php.html#156">QRcode</a></td><td class="text-right">600</td></tr>
+       <tr><td><a href="qrencode.php.html#396">QRencode</a></td><td class="text-right">462</td></tr>
+       <tr><td><a href="qrencode.php.html#306">FrameFiller</a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="qrencode.php.html#47">QRrawcode</a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="qrimage.php.html#27">QRimage</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="qrrscode.php.html#187">QRrs</a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="qrconst.php.html#50">qrstr</a></td><td class="text-right">12</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="qrencode.php.html#163"><abbr title="QRcode::encodeMask">encodeMask</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#238"><abbr title="QRcode::encodeInput">encodeInput</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#244"><abbr title="QRcode::encodeString8bit">encodeString8bit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#263"><abbr title="QRcode::encodeString">encodeString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#283"><abbr title="QRcode::png">png</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#290"><abbr title="QRcode::text">text</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#297"><abbr title="QRcode::raw">raw</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrconst.php.html#51"><abbr title="qrstr::set">set</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrtools.php.html#28"><abbr title="QRtools::binarize">binarize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrtools.php.html#42"><abbr title="QRtools::tcpdfBarcodeArray">tcpdfBarcodeArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrtools.php.html#73"><abbr title="QRtools::clearCache">clearCache</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrtools.php.html#79"><abbr title="QRtools::buildCache">buildCache</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrtools.php.html#101"><abbr title="QRtools::log">log</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrtools.php.html#115"><abbr title="QRtools::dumpMask">dumpMask</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrtools.php.html#126"><abbr title="QRtools::markTime">markTime</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrtools.php.html#138"><abbr title="QRtools::timeBenchmark">timeBenchmark</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#89"><abbr title="QRspec::getDataLength">getDataLength</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#95"><abbr title="QRspec::getECCLength">getECCLength</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#101"><abbr title="QRspec::getWidth">getWidth</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#107"><abbr title="QRspec::getRemainder">getRemainder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#113"><abbr title="QRspec::getMinimumVersion">getMinimumVersion</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#135"><abbr title="QRspec::lengthIndicator">lengthIndicator</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#152"><abbr title="QRspec::maximumWords">maximumWords</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#226"><abbr title="QRspec::getEccSpec">getEccSpec</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#280"><abbr title="QRspec::putAlignmentMarker">putAlignmentMarker</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#299"><abbr title="QRspec::putAlignmentPattern">putAlignmentPattern</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#352"><abbr title="QRspec::getVersionPattern">getVersionPattern</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#370"><abbr title="QRspec::getFormatInfo">getFormatInfo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#392"><abbr title="QRspec::putFinderPattern">putFinderPattern</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#410"><abbr title="QRspec::createFrame">createFrame</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#488"><abbr title="QRspec::debug">debug</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#542"><abbr title="QRspec::serial">serial</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#548"><abbr title="QRspec::unserial">unserial</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#554"><abbr title="QRspec::newFrame">newFrame</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#582"><abbr title="QRspec::rsBlockNum">rsBlockNum</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#583"><abbr title="QRspec::rsBlockNum1">rsBlockNum1</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#584"><abbr title="QRspec::rsDataCodes1">rsDataCodes1</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#585"><abbr title="QRspec::rsEccCodes1">rsEccCodes1</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#586"><abbr title="QRspec::rsBlockNum2">rsBlockNum2</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#587"><abbr title="QRspec::rsDataCodes2">rsDataCodes2</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#588"><abbr title="QRspec::rsEccCodes2">rsEccCodes2</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#589"><abbr title="QRspec::rsDataLength">rsDataLength</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrspec.php.html#590"><abbr title="QRspec::rsEccLength">rsEccLength</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrimage.php.html#30"><abbr title="QRimage::png">png</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrimage.php.html#51"><abbr title="QRimage::jpg">jpg</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrimage.php.html#66"><abbr title="QRimage::image">image</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#38"><abbr title="QRinputItem::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#58"><abbr title="QRinputItem::encodeModeNum">encodeModeNum</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#94"><abbr title="QRinputItem::encodeModeAn">encodeModeAn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#124"><abbr title="QRinputItem::encodeMode8">encodeMode8</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#145"><abbr title="QRinputItem::encodeModeKanji">encodeModeKanji</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#177"><abbr title="QRinputItem::encodeModeStructure">encodeModeStructure</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#196"><abbr title="QRinputItem::estimateBitStreamSizeOfEntry">estimateBitStreamSizeOfEntry</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#223"><abbr title="QRinputItem::encodeBitStream">encodeBitStream</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#282"><abbr title="QRinput::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#294"><abbr title="QRinput::getVersion">getVersion</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#300"><abbr title="QRinput::setVersion">setVersion</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#313"><abbr title="QRinput::getErrorCorrectionLevel">getErrorCorrectionLevel</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#319"><abbr title="QRinput::setErrorCorrectionLevel">setErrorCorrectionLevel</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#332"><abbr title="QRinput::appendEntry">appendEntry</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#338"><abbr title="QRinput::append">append</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#351"><abbr title="QRinput::insertStructuredAppendHeader">insertStructuredAppendHeader</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#373"><abbr title="QRinput::calcParity">calcParity</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#389"><abbr title="QRinput::checkModeNum">checkModeNum</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#401"><abbr title="QRinput::estimateBitsModeNum">estimateBitsModeNum</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#433"><abbr title="QRinput::lookAnTable">lookAnTable</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#439"><abbr title="QRinput::checkModeAn">checkModeAn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#451"><abbr title="QRinput::estimateBitsModeAn">estimateBitsModeAn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#464"><abbr title="QRinput::estimateBitsMode8">estimateBitsMode8</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#470"><abbr title="QRinput::estimateBitsModeKanji">estimateBitsModeKanji</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#476"><abbr title="QRinput::checkModeKanji">checkModeKanji</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#497"><abbr title="QRinput::check">check</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#518"><abbr title="QRinput::estimateBitStreamSize">estimateBitStreamSize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#530"><abbr title="QRinput::estimateVersion">estimateVersion</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#547"><abbr title="QRinput::lengthOfCode">lengthOfCode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#590"><abbr title="QRinput::createBitStream">createBitStream</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#607"><abbr title="QRinput::convertData">convertData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#635"><abbr title="QRinput::appendPaddingBit">appendPaddingBit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#680"><abbr title="QRinput::mergeBitStream">mergeBitStream</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#699"><abbr title="QRinput::getBitStream">getBitStream</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrinput.php.html#717"><abbr title="QRinput::getByteStream">getByteStream</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrbitstream.php.html#33"><abbr title="QRbitstream::size">size</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrbitstream.php.html#39"><abbr title="QRbitstream::allocate">allocate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrbitstream.php.html#46"><abbr title="QRbitstream::newFromNum">newFromNum</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrbitstream.php.html#65"><abbr title="QRbitstream::newFromBytes">newFromBytes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrbitstream.php.html#88"><abbr title="QRbitstream::append">append</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrbitstream.php.html#109"><abbr title="QRbitstream::appendNum">appendNum</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrbitstream.php.html#126"><abbr title="QRbitstream::appendBytes">appendBytes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrbitstream.php.html#143"><abbr title="QRbitstream::toByte">toByte</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrsplit.php.html#40"><abbr title="QRsplit::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrsplit.php.html#48"><abbr title="QRsplit::isdigitat">isdigitat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrsplit.php.html#57"><abbr title="QRsplit::isalnumat">isalnumat</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrsplit.php.html#66"><abbr title="QRsplit::identifyMode">identifyMode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrsplit.php.html#93"><abbr title="QRsplit::eatNum">eatNum</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrsplit.php.html#130"><abbr title="QRsplit::eatAn">eatAn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrsplit.php.html#177"><abbr title="QRsplit::eatKanji">eatKanji</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrsplit.php.html#193"><abbr title="QRsplit::eat8">eat8</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrsplit.php.html#248"><abbr title="QRsplit::splitString">splitString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrsplit.php.html#277"><abbr title="QRsplit::toUpper">toUpper</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrsplit.php.html#298"><abbr title="QRsplit::splitStringToQRinput">splitStringToQRinput</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrrscode.php.html#46"><abbr title="QRrsItem::modnn">modnn</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrrscode.php.html#57"><abbr title="QRrsItem::init_rs_char">init_rs_char</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrrscode.php.html#143"><abbr title="QRrsItem::encode_rs_char">encode_rs_char</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrrscode.php.html#192"><abbr title="QRrs::init_rs">init_rs</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#38"><abbr title="QRmask::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#44"><abbr title="QRmask::writeFormatInformation">writeFormatInformation</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#88"><abbr title="QRmask::mask0">mask0</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#89"><abbr title="QRmask::mask1">mask1</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#90"><abbr title="QRmask::mask2">mask2</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#91"><abbr title="QRmask::mask3">mask3</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#92"><abbr title="QRmask::mask4">mask4</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#93"><abbr title="QRmask::mask5">mask5</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#94"><abbr title="QRmask::mask6">mask6</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#95"><abbr title="QRmask::mask7">mask7</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#98"><abbr title="QRmask::generateMaskNo">generateMaskNo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#118"><abbr title="QRmask::serial">serial</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#129"><abbr title="QRmask::unserial">unserial</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#141"><abbr title="QRmask::makeMaskNo">makeMaskNo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#179"><abbr title="QRmask::makeMask">makeMask</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#189"><abbr title="QRmask::calcN1N3">calcN1N3</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#218"><abbr title="QRmask::evaluateSymbol">evaluateSymbol</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrmask.php.html#285"><abbr title="QRmask::mask">mask</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#34"><abbr title="QRrsblock::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#59"><abbr title="QRrawcode::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#87"><abbr title="QRrawcode::init">init</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#130"><abbr title="QRrawcode::getCode">getCode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#316"><abbr title="FrameFiller::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#327"><abbr title="FrameFiller::setFrameAt">setFrameAt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#333"><abbr title="FrameFiller::getFrameAt">getFrameAt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#339"><abbr title="FrameFiller::next">next</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#411"><abbr title="QRencode::factory">factory</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#446"><abbr title="QRencode::encodeRAW">encodeRAW</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#460"><abbr title="QRencode::encode">encode</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="qrencode.php.html#480"><abbr title="QRencode::encodePNG">encodePNG</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="qrrscode.php.html#57"><abbr title="QRrsItem::init_rs_char">init_rs_char</abbr></a></td><td class="text-right">380</td></tr>
+       <tr><td><a href="qrmask.php.html#218"><abbr title="QRmask::evaluateSymbol">evaluateSymbol</abbr></a></td><td class="text-right">306</td></tr>
+       <tr><td><a href="qrmask.php.html#189"><abbr title="QRmask::calcN1N3">calcN1N3</abbr></a></td><td class="text-right">240</td></tr>
+       <tr><td><a href="qrencode.php.html#411"><abbr title="QRencode::factory">factory</abbr></a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="qrinput.php.html#547"><abbr title="QRinput::lengthOfCode">lengthOfCode</abbr></a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="qrencode.php.html#163"><abbr title="QRcode::encodeMask">encodeMask</abbr></a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="qrinput.php.html#223"><abbr title="QRinputItem::encodeBitStream">encodeBitStream</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="qrsplit.php.html#66"><abbr title="QRsplit::identifyMode">identifyMode</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="qrsplit.php.html#193"><abbr title="QRsplit::eat8">eat8</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="qrsplit.php.html#248"><abbr title="QRsplit::splitString">splitString</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="qrencode.php.html#339"><abbr title="FrameFiller::next">next</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="qrspec.php.html#410"><abbr title="QRspec::createFrame">createFrame</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="qrinput.php.html#196"><abbr title="QRinputItem::estimateBitStreamSizeOfEntry">estimateBitStreamSizeOfEntry</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="qrinput.php.html#497"><abbr title="QRinput::check">check</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="qrinput.php.html#635"><abbr title="QRinput::appendPaddingBit">appendPaddingBit</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="qrsplit.php.html#130"><abbr title="QRsplit::eatAn">eatAn</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="qrrscode.php.html#192"><abbr title="QRrs::init_rs">init_rs</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="qrmask.php.html#141"><abbr title="QRmask::makeMaskNo">makeMaskNo</abbr></a></td><td class="text-right">72</td></tr>
+       <tr><td><a href="qrspec.php.html#299"><abbr title="QRspec::putAlignmentPattern">putAlignmentPattern</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="qrspec.php.html#554"><abbr title="QRspec::newFrame">newFrame</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="qrinput.php.html#476"><abbr title="QRinput::checkModeKanji">checkModeKanji</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="qrsplit.php.html#93"><abbr title="QRsplit::eatNum">eatNum</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="qrmask.php.html#44"><abbr title="QRmask::writeFormatInformation">writeFormatInformation</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="qrtools.php.html#42"><abbr title="QRtools::tcpdfBarcodeArray">tcpdfBarcodeArray</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="qrinput.php.html#607"><abbr title="QRinput::convertData">convertData</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="qrbitstream.php.html#143"><abbr title="QRbitstream::toByte">toByte</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="qrencode.php.html#263"><abbr title="QRcode::encodeString">encodeString</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="qrspec.php.html#152"><abbr title="QRspec::maximumWords">maximumWords</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="qrspec.php.html#370"><abbr title="QRspec::getFormatInfo">getFormatInfo</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="qrinput.php.html#58"><abbr title="QRinputItem::encodeModeNum">encodeModeNum</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="qrinput.php.html#351"><abbr title="QRinput::insertStructuredAppendHeader">insertStructuredAppendHeader</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="qrsplit.php.html#277"><abbr title="QRsplit::toUpper">toUpper</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="qrsplit.php.html#298"><abbr title="QRsplit::splitStringToQRinput">splitStringToQRinput</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="qrrscode.php.html#143"><abbr title="QRrsItem::encode_rs_char">encode_rs_char</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="qrmask.php.html#98"><abbr title="QRmask::generateMaskNo">generateMaskNo</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="qrmask.php.html#285"><abbr title="QRmask::mask">mask</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="qrencode.php.html#87"><abbr title="QRrawcode::init">init</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="qrencode.php.html#244"><abbr title="QRcode::encodeString8bit">encodeString8bit</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrtools.php.html#28"><abbr title="QRtools::binarize">binarize</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrtools.php.html#79"><abbr title="QRtools::buildCache">buildCache</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrtools.php.html#101"><abbr title="QRtools::log">log</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrspec.php.html#135"><abbr title="QRspec::lengthIndicator">lengthIndicator</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrspec.php.html#488"><abbr title="QRspec::debug">debug</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrimage.php.html#66"><abbr title="QRimage::image">image</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrinput.php.html#94"><abbr title="QRinputItem::encodeModeAn">encodeModeAn</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrinput.php.html#145"><abbr title="QRinputItem::encodeModeKanji">encodeModeKanji</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrinput.php.html#282"><abbr title="QRinput::__construct">__construct</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrinput.php.html#373"><abbr title="QRinput::calcParity">calcParity</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrinput.php.html#389"><abbr title="QRinput::checkModeNum">checkModeNum</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrinput.php.html#401"><abbr title="QRinput::estimateBitsModeNum">estimateBitsModeNum</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrinput.php.html#680"><abbr title="QRinput::mergeBitStream">mergeBitStream</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrbitstream.php.html#65"><abbr title="QRbitstream::newFromBytes">newFromBytes</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrbitstream.php.html#88"><abbr title="QRbitstream::append">append</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrencode.php.html#130"><abbr title="QRrawcode::getCode">getCode</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="qrconst.php.html#51"><abbr title="qrstr::set">set</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrtools.php.html#115"><abbr title="QRtools::dumpMask">dumpMask</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrtools.php.html#138"><abbr title="QRtools::timeBenchmark">timeBenchmark</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrspec.php.html#113"><abbr title="QRspec::getMinimumVersion">getMinimumVersion</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrspec.php.html#226"><abbr title="QRspec::getEccSpec">getEccSpec</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrspec.php.html#352"><abbr title="QRspec::getVersionPattern">getVersionPattern</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrimage.php.html#30"><abbr title="QRimage::png">png</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrinput.php.html#38"><abbr title="QRinputItem::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrinput.php.html#124"><abbr title="QRinputItem::encodeMode8">encodeMode8</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrinput.php.html#300"><abbr title="QRinput::setVersion">setVersion</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrinput.php.html#439"><abbr title="QRinput::checkModeAn">checkModeAn</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrinput.php.html#590"><abbr title="QRinput::createBitStream">createBitStream</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrinput.php.html#699"><abbr title="QRinput::getBitStream">getBitStream</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrbitstream.php.html#46"><abbr title="QRbitstream::newFromNum">newFromNum</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrbitstream.php.html#109"><abbr title="QRbitstream::appendNum">appendNum</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrbitstream.php.html#126"><abbr title="QRbitstream::appendBytes">appendBytes</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrsplit.php.html#48"><abbr title="QRsplit::isdigitat">isdigitat</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrsplit.php.html#177"><abbr title="QRsplit::eatKanji">eatKanji</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrencode.php.html#59"><abbr title="QRrawcode::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrencode.php.html#460"><abbr title="QRencode::encode">encode</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrencode.php.html#480"><abbr title="QRencode::encodePNG">encodePNG</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="qrtools.php.html#126"><abbr title="QRtools::markTime">markTime</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrspec.php.html#280"><abbr title="QRspec::putAlignmentMarker">putAlignmentMarker</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrspec.php.html#392"><abbr title="QRspec::putFinderPattern">putFinderPattern</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrimage.php.html#51"><abbr title="QRimage::jpg">jpg</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrinput.php.html#177"><abbr title="QRinputItem::encodeModeStructure">encodeModeStructure</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrinput.php.html#319"><abbr title="QRinput::setErrorCorrectionLevel">setErrorCorrectionLevel</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrinput.php.html#338"><abbr title="QRinput::append">append</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrinput.php.html#433"><abbr title="QRinput::lookAnTable">lookAnTable</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrinput.php.html#451"><abbr title="QRinput::estimateBitsModeAn">estimateBitsModeAn</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrinput.php.html#518"><abbr title="QRinput::estimateBitStreamSize">estimateBitStreamSize</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrinput.php.html#530"><abbr title="QRinput::estimateVersion">estimateVersion</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrinput.php.html#717"><abbr title="QRinput::getByteStream">getByteStream</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrsplit.php.html#57"><abbr title="QRsplit::isalnumat">isalnumat</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrrscode.php.html#46"><abbr title="QRrsItem::modnn">modnn</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrmask.php.html#118"><abbr title="QRmask::serial">serial</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrmask.php.html#129"><abbr title="QRmask::unserial">unserial</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="qrencode.php.html#446"><abbr title="QRencode::encodeRAW">encodeRAW</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 11.0.3</a> using <a href="https://www.php.net/" target="_top">PHP 8.2.12</a> and <a href="https://phpunit.de/">PHPUnit 11.2.5</a> at Sat Jun 29 14:04:46 CEST 2024.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../../_js/jquery.min.js?v=11.0.3" type="text/javascript"></script>
+  <script src="../../_js/d3.min.js?v=11.0.3" type="text/javascript"></script>
+  <script src="../../_js/nv.d3.min.js?v=11.0.3" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([16,0,0,0,0,0,0,0,0,0,0,0], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([134,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,24,"<a href=\"qrencode.php.html#156\">QRcode<\/a>"],[0,3,"<a href=\"qrconst.php.html#50\">qrstr<\/a>"],[0,27,"<a href=\"qrtools.php.html#25\">QRtools<\/a>"],[0,69,"<a href=\"qrspec.php.html#42\">QRspec<\/a>"],[0,9,"<a href=\"qrimage.php.html#27\">QRimage<\/a>"],[0,39,"<a href=\"qrinput.php.html#31\">QRinputItem<\/a>"],[0,97,"<a href=\"qrinput.php.html#274\">QRinput<\/a>"],[0,25,"<a href=\"qrbitstream.php.html#28\">QRbitstream<\/a>"],[0,64,"<a href=\"qrsplit.php.html#33\">QRsplit<\/a>"],[0,26,"<a href=\"qrrscode.php.html#31\">QRrsItem<\/a>"],[0,8,"<a href=\"qrrscode.php.html#187\">QRrs<\/a>"],[0,71,"<a href=\"qrmask.php.html#33\">QRmask<\/a>"],[0,1,"<a href=\"qrencode.php.html#28\">QRrsblock<\/a>"],[0,12,"<a href=\"qrencode.php.html#47\">QRrawcode<\/a>"],[0,13,"<a href=\"qrencode.php.html#306\">FrameFiller<\/a>"],[0,21,"<a href=\"qrencode.php.html#396\">QRencode<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,11,"<a href=\"qrencode.php.html#163\">QRcode::encodeMask<\/a>"],[0,1,"<a href=\"qrencode.php.html#238\">QRcode::encodeInput<\/a>"],[0,4,"<a href=\"qrencode.php.html#244\">QRcode::encodeString8bit<\/a>"],[0,5,"<a href=\"qrencode.php.html#263\">QRcode::encodeString<\/a>"],[0,1,"<a href=\"qrencode.php.html#283\">QRcode::png<\/a>"],[0,1,"<a href=\"qrencode.php.html#290\">QRcode::text<\/a>"],[0,1,"<a href=\"qrencode.php.html#297\">QRcode::raw<\/a>"],[0,3,"<a href=\"qrconst.php.html#51\">qrstr::set<\/a>"],[0,4,"<a href=\"qrtools.php.html#28\">QRtools::binarize<\/a>"],[0,6,"<a href=\"qrtools.php.html#42\">QRtools::tcpdfBarcodeArray<\/a>"],[0,1,"<a href=\"qrtools.php.html#73\">QRtools::clearCache<\/a>"],[0,4,"<a href=\"qrtools.php.html#79\">QRtools::buildCache<\/a>"],[0,4,"<a href=\"qrtools.php.html#101\">QRtools::log<\/a>"],[0,3,"<a href=\"qrtools.php.html#115\">QRtools::dumpMask<\/a>"],[0,2,"<a href=\"qrtools.php.html#126\">QRtools::markTime<\/a>"],[0,3,"<a href=\"qrtools.php.html#138\">QRtools::timeBenchmark<\/a>"],[0,1,"<a href=\"qrspec.php.html#89\">QRspec::getDataLength<\/a>"],[0,1,"<a href=\"qrspec.php.html#95\">QRspec::getECCLength<\/a>"],[0,1,"<a href=\"qrspec.php.html#101\">QRspec::getWidth<\/a>"],[0,1,"<a href=\"qrspec.php.html#107\">QRspec::getRemainder<\/a>"],[0,3,"<a href=\"qrspec.php.html#113\">QRspec::getMinimumVersion<\/a>"],[0,4,"<a href=\"qrspec.php.html#135\">QRspec::lengthIndicator<\/a>"],[0,5,"<a href=\"qrspec.php.html#152\">QRspec::maximumWords<\/a>"],[0,3,"<a href=\"qrspec.php.html#226\">QRspec::getEccSpec<\/a>"],[0,2,"<a href=\"qrspec.php.html#280\">QRspec::putAlignmentMarker<\/a>"],[0,7,"<a href=\"qrspec.php.html#299\">QRspec::putAlignmentPattern<\/a>"],[0,3,"<a href=\"qrspec.php.html#352\">QRspec::getVersionPattern<\/a>"],[0,5,"<a href=\"qrspec.php.html#370\">QRspec::getFormatInfo<\/a>"],[0,2,"<a href=\"qrspec.php.html#392\">QRspec::putFinderPattern<\/a>"],[0,9,"<a href=\"qrspec.php.html#410\">QRspec::createFrame<\/a>"],[0,4,"<a href=\"qrspec.php.html#488\">QRspec::debug<\/a>"],[0,1,"<a href=\"qrspec.php.html#542\">QRspec::serial<\/a>"],[0,1,"<a href=\"qrspec.php.html#548\">QRspec::unserial<\/a>"],[0,7,"<a href=\"qrspec.php.html#554\">QRspec::newFrame<\/a>"],[0,1,"<a href=\"qrspec.php.html#582\">QRspec::rsBlockNum<\/a>"],[0,1,"<a href=\"qrspec.php.html#583\">QRspec::rsBlockNum1<\/a>"],[0,1,"<a href=\"qrspec.php.html#584\">QRspec::rsDataCodes1<\/a>"],[0,1,"<a href=\"qrspec.php.html#585\">QRspec::rsEccCodes1<\/a>"],[0,1,"<a href=\"qrspec.php.html#586\">QRspec::rsBlockNum2<\/a>"],[0,1,"<a href=\"qrspec.php.html#587\">QRspec::rsDataCodes2<\/a>"],[0,1,"<a href=\"qrspec.php.html#588\">QRspec::rsEccCodes2<\/a>"],[0,1,"<a href=\"qrspec.php.html#589\">QRspec::rsDataLength<\/a>"],[0,1,"<a href=\"qrspec.php.html#590\">QRspec::rsEccLength<\/a>"],[0,3,"<a href=\"qrimage.php.html#30\">QRimage::png<\/a>"],[0,2,"<a href=\"qrimage.php.html#51\">QRimage::jpg<\/a>"],[0,4,"<a href=\"qrimage.php.html#66\">QRimage::image<\/a>"],[0,3,"<a href=\"qrinput.php.html#38\">QRinputItem::__construct<\/a>"],[0,5,"<a href=\"qrinput.php.html#58\">QRinputItem::encodeModeNum<\/a>"],[0,4,"<a href=\"qrinput.php.html#94\">QRinputItem::encodeModeAn<\/a>"],[0,3,"<a href=\"qrinput.php.html#124\">QRinputItem::encodeMode8<\/a>"],[0,4,"<a href=\"qrinput.php.html#145\">QRinputItem::encodeModeKanji<\/a>"],[0,2,"<a href=\"qrinput.php.html#177\">QRinputItem::encodeModeStructure<\/a>"],[0,8,"<a href=\"qrinput.php.html#196\">QRinputItem::estimateBitStreamSizeOfEntry<\/a>"],[0,10,"<a href=\"qrinput.php.html#223\">QRinputItem::encodeBitStream<\/a>"],[0,4,"<a href=\"qrinput.php.html#282\">QRinput::__construct<\/a>"],[0,1,"<a href=\"qrinput.php.html#294\">QRinput::getVersion<\/a>"],[0,3,"<a href=\"qrinput.php.html#300\">QRinput::setVersion<\/a>"],[0,1,"<a href=\"qrinput.php.html#313\">QRinput::getErrorCorrectionLevel<\/a>"],[0,2,"<a href=\"qrinput.php.html#319\">QRinput::setErrorCorrectionLevel<\/a>"],[0,1,"<a href=\"qrinput.php.html#332\">QRinput::appendEntry<\/a>"],[0,2,"<a href=\"qrinput.php.html#338\">QRinput::append<\/a>"],[0,5,"<a href=\"qrinput.php.html#351\">QRinput::insertStructuredAppendHeader<\/a>"],[0,4,"<a href=\"qrinput.php.html#373\">QRinput::calcParity<\/a>"],[0,4,"<a href=\"qrinput.php.html#389\">QRinput::checkModeNum<\/a>"],[0,4,"<a href=\"qrinput.php.html#401\">QRinput::estimateBitsModeNum<\/a>"],[0,2,"<a href=\"qrinput.php.html#433\">QRinput::lookAnTable<\/a>"],[0,3,"<a href=\"qrinput.php.html#439\">QRinput::checkModeAn<\/a>"],[0,2,"<a href=\"qrinput.php.html#451\">QRinput::estimateBitsModeAn<\/a>"],[0,1,"<a href=\"qrinput.php.html#464\">QRinput::estimateBitsMode8<\/a>"],[0,1,"<a href=\"qrinput.php.html#470\">QRinput::estimateBitsModeKanji<\/a>"],[0,7,"<a href=\"qrinput.php.html#476\">QRinput::checkModeKanji<\/a>"],[0,8,"<a href=\"qrinput.php.html#497\">QRinput::check<\/a>"],[0,2,"<a href=\"qrinput.php.html#518\">QRinput::estimateBitStreamSize<\/a>"],[0,2,"<a href=\"qrinput.php.html#530\">QRinput::estimateVersion<\/a>"],[0,12,"<a href=\"qrinput.php.html#547\">QRinput::lengthOfCode<\/a>"],[0,3,"<a href=\"qrinput.php.html#590\">QRinput::createBitStream<\/a>"],[0,6,"<a href=\"qrinput.php.html#607\">QRinput::convertData<\/a>"],[0,8,"<a href=\"qrinput.php.html#635\">QRinput::appendPaddingBit<\/a>"],[0,4,"<a href=\"qrinput.php.html#680\">QRinput::mergeBitStream<\/a>"],[0,3,"<a href=\"qrinput.php.html#699\">QRinput::getBitStream<\/a>"],[0,2,"<a href=\"qrinput.php.html#717\">QRinput::getByteStream<\/a>"],[0,1,"<a href=\"qrbitstream.php.html#33\">QRbitstream::size<\/a>"],[0,1,"<a href=\"qrbitstream.php.html#39\">QRbitstream::allocate<\/a>"],[0,3,"<a href=\"qrbitstream.php.html#46\">QRbitstream::newFromNum<\/a>"],[0,4,"<a href=\"qrbitstream.php.html#65\">QRbitstream::newFromBytes<\/a>"],[0,4,"<a href=\"qrbitstream.php.html#88\">QRbitstream::append<\/a>"],[0,3,"<a href=\"qrbitstream.php.html#109\">QRbitstream::appendNum<\/a>"],[0,3,"<a href=\"qrbitstream.php.html#126\">QRbitstream::appendBytes<\/a>"],[0,6,"<a href=\"qrbitstream.php.html#143\">QRbitstream::toByte<\/a>"],[0,1,"<a href=\"qrsplit.php.html#40\">QRsplit::__construct<\/a>"],[0,3,"<a href=\"qrsplit.php.html#48\">QRsplit::isdigitat<\/a>"],[0,2,"<a href=\"qrsplit.php.html#57\">QRsplit::isalnumat<\/a>"],[0,10,"<a href=\"qrsplit.php.html#66\">QRsplit::identifyMode<\/a>"],[0,7,"<a href=\"qrsplit.php.html#93\">QRsplit::eatNum<\/a>"],[0,8,"<a href=\"qrsplit.php.html#130\">QRsplit::eatAn<\/a>"],[0,3,"<a href=\"qrsplit.php.html#177\">QRsplit::eatKanji<\/a>"],[0,10,"<a href=\"qrsplit.php.html#193\">QRsplit::eat8<\/a>"],[0,10,"<a href=\"qrsplit.php.html#248\">QRsplit::splitString<\/a>"],[0,5,"<a href=\"qrsplit.php.html#277\">QRsplit::toUpper<\/a>"],[0,5,"<a href=\"qrsplit.php.html#298\">QRsplit::splitStringToQRinput<\/a>"],[0,2,"<a href=\"qrrscode.php.html#46\">QRrsItem::modnn<\/a>"],[0,19,"<a href=\"qrrscode.php.html#57\">QRrsItem::init_rs_char<\/a>"],[0,5,"<a href=\"qrrscode.php.html#143\">QRrsItem::encode_rs_char<\/a>"],[0,8,"<a href=\"qrrscode.php.html#192\">QRrs::init_rs<\/a>"],[0,1,"<a href=\"qrmask.php.html#38\">QRmask::__construct<\/a>"],[0,7,"<a href=\"qrmask.php.html#44\">QRmask::writeFormatInformation<\/a>"],[0,1,"<a href=\"qrmask.php.html#88\">QRmask::mask0<\/a>"],[0,1,"<a href=\"qrmask.php.html#89\">QRmask::mask1<\/a>"],[0,1,"<a href=\"qrmask.php.html#90\">QRmask::mask2<\/a>"],[0,1,"<a href=\"qrmask.php.html#91\">QRmask::mask3<\/a>"],[0,1,"<a href=\"qrmask.php.html#92\">QRmask::mask4<\/a>"],[0,1,"<a href=\"qrmask.php.html#93\">QRmask::mask5<\/a>"],[0,1,"<a href=\"qrmask.php.html#94\">QRmask::mask6<\/a>"],[0,1,"<a href=\"qrmask.php.html#95\">QRmask::mask7<\/a>"],[0,5,"<a href=\"qrmask.php.html#98\">QRmask::generateMaskNo<\/a>"],[0,2,"<a href=\"qrmask.php.html#118\">QRmask::serial<\/a>"],[0,2,"<a href=\"qrmask.php.html#129\">QRmask::unserial<\/a>"],[0,8,"<a href=\"qrmask.php.html#141\">QRmask::makeMaskNo<\/a>"],[0,1,"<a href=\"qrmask.php.html#179\">QRmask::makeMask<\/a>"],[0,15,"<a href=\"qrmask.php.html#189\">QRmask::calcN1N3<\/a>"],[0,17,"<a href=\"qrmask.php.html#218\">QRmask::evaluateSymbol<\/a>"],[0,5,"<a href=\"qrmask.php.html#285\">QRmask::mask<\/a>"],[0,1,"<a href=\"qrencode.php.html#34\">QRrsblock::__construct<\/a>"],[0,3,"<a href=\"qrencode.php.html#59\">QRrawcode::__construct<\/a>"],[0,5,"<a href=\"qrencode.php.html#87\">QRrawcode::init<\/a>"],[0,4,"<a href=\"qrencode.php.html#130\">QRrawcode::getCode<\/a>"],[0,1,"<a href=\"qrencode.php.html#316\">FrameFiller::__construct<\/a>"],[0,1,"<a href=\"qrencode.php.html#327\">FrameFiller::setFrameAt<\/a>"],[0,1,"<a href=\"qrencode.php.html#333\">FrameFiller::getFrameAt<\/a>"],[0,10,"<a href=\"qrencode.php.html#339\">FrameFiller::next<\/a>"],[0,13,"<a href=\"qrencode.php.html#411\">QRencode::factory<\/a>"],[0,2,"<a href=\"qrencode.php.html#446\">QRencode::encodeRAW<\/a>"],[0,3,"<a href=\"qrencode.php.html#460\">QRencode::encode<\/a>"],[0,3,"<a href=\"qrencode.php.html#480\">QRencode::encodePNG<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

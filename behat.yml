@@ -1,0 +1,21 @@
+default:
+  suites:
+    default:
+      name: "BDD Features"
+      paths:
+        - '%paths.base%/features'
+      contexts:
+        - FeatureContext
+  extensions:
+    Behat\MinkExtension:
+      default_session: goutte
+      sessions:
+        goutte:
+          goutte: ~
+    emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+      name: html
+      renderer: Twig,Behat2
+      file_name: index
+      print_args: true
+      print_outp: true
+      loop_break: true

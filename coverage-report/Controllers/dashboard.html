@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\Users\JOSE\Downloads\Proyecto (2)\Proyecto\src\Controllers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../_css/bootstrap.min.css?v=11.0.4" rel="stylesheet" type="text/css">
+  <link href="../_css/nv.d3.min.css?v=11.0.4" rel="stylesheet" type="text/css">
+  <link href="../_css/style.css?v=11.0.4" rel="stylesheet" type="text/css">
+  <link href="../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../index.html">C:\Users\JOSE\Downloads\Proyecto (2)\Proyecto\src</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Controllers</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="About.php.html#2">About</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Alquiler.php.html#4">Alquiler</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cars.php.html#2">Cars</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Clientes.php.html#2">Clientes</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Contact.php.html#8">Contact</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dashboard.php.html#3">Dashboard</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Documentos.php.html#2">Documentos</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Empresa.php.html#3">Empresa</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Errors.php.html#2">Errors</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Login.php.html#2">Login</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Major.php.html#2">Major</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Marcas.php.html#2">Marcas</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Pricing.php.html#2">Pricing</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Reservas.php.html#9">Reservas</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services.php.html#2">Services</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Tipos.php.html#2">Tipos</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Usuarios.php.html#2">Usuarios</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Vehiculos.php.html#3">Vehiculos</a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Usuarios.php.html#2">Usuarios</a></td><td class="text-right">2162</td></tr>
+       <tr><td><a href="Clientes.php.html#2">Clientes</a></td><td class="text-right">1640</td></tr>
+       <tr><td><a href="Vehiculos.php.html#3">Vehiculos</a></td><td class="text-right">1482</td></tr>
+       <tr><td><a href="Alquiler.php.html#4">Alquiler</a></td><td class="text-right">1260</td></tr>
+       <tr><td><a href="Reservas.php.html#9">Reservas</a></td><td class="text-right">756</td></tr>
+       <tr><td><a href="Documentos.php.html#2">Documentos</a></td><td class="text-right">240</td></tr>
+       <tr><td><a href="Marcas.php.html#2">Marcas</a></td><td class="text-right">240</td></tr>
+       <tr><td><a href="Tipos.php.html#2">Tipos</a></td><td class="text-right">240</td></tr>
+       <tr><td><a href="Empresa.php.html#3">Empresa</a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="Major.php.html#2">Major</a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="Contact.php.html#8">Contact</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Login.php.html#2">Login</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Dashboard.php.html#3">Dashboard</a></td><td class="text-right">42</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="About.php.html#4"><abbr title="About::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="About.php.html#8"><abbr title="About::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Alquiler.php.html#6"><abbr title="Alquiler::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Alquiler.php.html#18"><abbr title="Alquiler::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Alquiler.php.html#25"><abbr title="Alquiler::registrar">registrar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Alquiler.php.html#73"><abbr title="Alquiler::listar">listar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Alquiler.php.html#92"><abbr title="Alquiler::ver">ver</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Alquiler.php.html#98"><abbr title="Alquiler::procesar">procesar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Alquiler.php.html#111"><abbr title="Alquiler::pdfPrestamo">pdfPrestamo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Alquiler.php.html#191"><abbr title="Alquiler::pdfAlquiler">pdfAlquiler</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cars.php.html#4"><abbr title="Cars::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cars.php.html#8"><abbr title="Cars::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Cars.php.html#17"><abbr title="Cars::single">single</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Clientes.php.html#3"><abbr title="Clientes::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Clientes.php.html#10"><abbr title="Clientes::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Clientes.php.html#17"><abbr title="Clientes::listar">listar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Clientes.php.html#31"><abbr title="Clientes::registrar">registrar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Clientes.php.html#65"><abbr title="Clientes::editar">editar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Clientes.php.html#74"><abbr title="Clientes::eliminar">eliminar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Clientes.php.html#89"><abbr title="Clientes::buscarCliente">buscarCliente</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Clientes.php.html#105"><abbr title="Clientes::cambiarPass">cambiarPass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Clientes.php.html#135"><abbr title="Clientes::perfil">perfil</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Clientes.php.html#142"><abbr title="Clientes::actualizarDato">actualizarDato</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Contact.php.html#10"><abbr title="Contact::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Contact.php.html#15"><abbr title="Contact::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Contact.php.html#23"><abbr title="Contact::enviarCorreo">enviarCorreo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dashboard.php.html#5"><abbr title="Dashboard::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dashboard.php.html#13"><abbr title="Dashboard::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dashboard.php.html#27"><abbr title="Dashboard::rentas">rentas</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Dashboard.php.html#36"><abbr title="Dashboard::rentasSemana">rentasSemana</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Documentos.php.html#4"><abbr title="Documentos::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Documentos.php.html#15"><abbr title="Documentos::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Documentos.php.html#20"><abbr title="Documentos::listar">listar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Documentos.php.html#31"><abbr title="Documentos::registrar">registrar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Documentos.php.html#59"><abbr title="Documentos::editar">editar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Documentos.php.html#65"><abbr title="Documentos::eliminar">eliminar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Empresa.php.html#5"><abbr title="Empresa::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Empresa.php.html#13"><abbr title="Empresa::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Empresa.php.html#18"><abbr title="Empresa::is_valid_email">is_valid_email</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Empresa.php.html#22"><abbr title="Empresa::modificar">modificar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Errors.php.html#4"><abbr title="Errors::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Errors.php.html#9"><abbr title="Errors::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Login.php.html#4"><abbr title="Login::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Login.php.html#8"><abbr title="Login::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Login.php.html#14"><abbr title="Login::validar">validar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Major.php.html#4"><abbr title="Major::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Major.php.html#9"><abbr title="Major::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Major.php.html#15"><abbr title="Major::verify">verify</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Marcas.php.html#4"><abbr title="Marcas::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Marcas.php.html#15"><abbr title="Marcas::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Marcas.php.html#19"><abbr title="Marcas::listar">listar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Marcas.php.html#30"><abbr title="Marcas::registrar">registrar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Marcas.php.html#58"><abbr title="Marcas::editar">editar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Marcas.php.html#64"><abbr title="Marcas::eliminar">eliminar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Pricing.php.html#4"><abbr title="Pricing::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Pricing.php.html#8"><abbr title="Pricing::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Reservas.php.html#11"><abbr title="Reservas::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Reservas.php.html#20"><abbr title="Reservas::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Reservas.php.html#26"><abbr title="Reservas::listar">listar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Reservas.php.html#47"><abbr title="Reservas::getVehiculo">getVehiculo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Reservas.php.html#54"><abbr title="Reservas::solicitar">solicitar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Reservas.php.html#97"><abbr title="Reservas::verify">verify</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Reservas.php.html#107"><abbr title="Reservas::aprobar">aprobar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services.php.html#4"><abbr title="Services::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Services.php.html#8"><abbr title="Services::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Tipos.php.html#3"><abbr title="Tipos::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Tipos.php.html#13"><abbr title="Tipos::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Tipos.php.html#17"><abbr title="Tipos::listar">listar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Tipos.php.html#28"><abbr title="Tipos::registrar">registrar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Tipos.php.html#56"><abbr title="Tipos::editar">editar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Tipos.php.html#62"><abbr title="Tipos::eliminar">eliminar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Usuarios.php.html#3"><abbr title="Usuarios::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Usuarios.php.html#13"><abbr title="Usuarios::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Usuarios.php.html#17"><abbr title="Usuarios::listar">listar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Usuarios.php.html#30"><abbr title="Usuarios::registrar">registrar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Usuarios.php.html#77"><abbr title="Usuarios::editar">editar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Usuarios.php.html#83"><abbr title="Usuarios::eliminar">eliminar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Usuarios.php.html#95"><abbr title="Usuarios::cambiarPass">cambiarPass</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Usuarios.php.html#124"><abbr title="Usuarios::perfil">perfil</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Usuarios.php.html#131"><abbr title="Usuarios::actualizarDato">actualizarDato</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Usuarios.php.html#182"><abbr title="Usuarios::salir">salir</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Usuarios.php.html#188"><abbr title="Usuarios::is_valid_email">is_valid_email</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Vehiculos.php.html#5"><abbr title="Vehiculos::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Vehiculos.php.html#16"><abbr title="Vehiculos::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Vehiculos.php.html#22"><abbr title="Vehiculos::listar">listar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Vehiculos.php.html#35"><abbr title="Vehiculos::registrar">registrar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Vehiculos.php.html#116"><abbr title="Vehiculos::editar">editar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Vehiculos.php.html#122"><abbr title="Vehiculos::eliminar">eliminar</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Vehiculos.php.html#134"><abbr title="Vehiculos::buscarVehiculo">buscarVehiculo</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Vehiculos.php.html#35"><abbr title="Vehiculos::registrar">registrar</abbr></a></td><td class="text-right">702</td></tr>
+       <tr><td><a href="Alquiler.php.html#25"><abbr title="Alquiler::registrar">registrar</abbr></a></td><td class="text-right">240</td></tr>
+       <tr><td><a href="Usuarios.php.html#131"><abbr title="Usuarios::actualizarDato">actualizarDato</abbr></a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="Usuarios.php.html#30"><abbr title="Usuarios::registrar">registrar</abbr></a></td><td class="text-right">182</td></tr>
+       <tr><td><a href="Clientes.php.html#31"><abbr title="Clientes::registrar">registrar</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Empresa.php.html#22"><abbr title="Empresa::modificar">modificar</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Reservas.php.html#54"><abbr title="Reservas::solicitar">solicitar</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Major.php.html#15"><abbr title="Major::verify">verify</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Clientes.php.html#105"><abbr title="Clientes::cambiarPass">cambiarPass</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Clientes.php.html#142"><abbr title="Clientes::actualizarDato">actualizarDato</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Contact.php.html#23"><abbr title="Contact::enviarCorreo">enviarCorreo</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Login.php.html#14"><abbr title="Login::validar">validar</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Usuarios.php.html#95"><abbr title="Usuarios::cambiarPass">cambiarPass</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Documentos.php.html#31"><abbr title="Documentos::registrar">registrar</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Marcas.php.html#30"><abbr title="Marcas::registrar">registrar</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Reservas.php.html#107"><abbr title="Reservas::aprobar">aprobar</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Tipos.php.html#28"><abbr title="Tipos::registrar">registrar</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="Alquiler.php.html#111"><abbr title="Alquiler::pdfPrestamo">pdfPrestamo</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Reservas.php.html#26"><abbr title="Reservas::listar">listar</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Alquiler.php.html#191"><abbr title="Alquiler::pdfAlquiler">pdfAlquiler</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Alquiler.php.html#6"><abbr title="Alquiler::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Alquiler.php.html#73"><abbr title="Alquiler::listar">listar</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Alquiler.php.html#98"><abbr title="Alquiler::procesar">procesar</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Clientes.php.html#17"><abbr title="Clientes::listar">listar</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Clientes.php.html#74"><abbr title="Clientes::eliminar">eliminar</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Clientes.php.html#89"><abbr title="Clientes::buscarCliente">buscarCliente</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Documentos.php.html#4"><abbr title="Documentos::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Marcas.php.html#4"><abbr title="Marcas::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Tipos.php.html#3"><abbr title="Tipos::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Usuarios.php.html#3"><abbr title="Usuarios::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Vehiculos.php.html#5"><abbr title="Vehiculos::__construct">__construct</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Vehiculos.php.html#134"><abbr title="Vehiculos::buscarVehiculo">buscarVehiculo</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Clientes.php.html#3"><abbr title="Clientes::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Clientes.php.html#10"><abbr title="Clientes::index">index</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Clientes.php.html#65"><abbr title="Clientes::editar">editar</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Dashboard.php.html#5"><abbr title="Dashboard::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Dashboard.php.html#13"><abbr title="Dashboard::index">index</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Documentos.php.html#20"><abbr title="Documentos::listar">listar</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Documentos.php.html#65"><abbr title="Documentos::eliminar">eliminar</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Empresa.php.html#5"><abbr title="Empresa::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Marcas.php.html#19"><abbr title="Marcas::listar">listar</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Marcas.php.html#64"><abbr title="Marcas::eliminar">eliminar</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Reservas.php.html#11"><abbr title="Reservas::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Reservas.php.html#97"><abbr title="Reservas::verify">verify</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Tipos.php.html#17"><abbr title="Tipos::listar">listar</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Tipos.php.html#62"><abbr title="Tipos::eliminar">eliminar</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Usuarios.php.html#17"><abbr title="Usuarios::listar">listar</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Usuarios.php.html#83"><abbr title="Usuarios::eliminar">eliminar</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Vehiculos.php.html#22"><abbr title="Vehiculos::listar">listar</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Vehiculos.php.html#122"><abbr title="Vehiculos::eliminar">eliminar</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 11.0.4</a> using <a href="https://www.php.net/" target="_top">PHP 8.2.12</a> and <a href="https://phpunit.de/">PHPUnit 11.2.5</a> at Thu Jul 4 18:52:59 CEST 2024.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../_js/jquery.min.js?v=11.0.4" type="text/javascript"></script>
+  <script src="../_js/d3.min.js?v=11.0.4" type="text/javascript"></script>
+  <script src="../_js/nv.d3.min.js?v=11.0.4" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([18,0,0,0,0,0,0,0,0,0,0,0], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([89,0,0,0,0,0,0,0,0,0,0,0], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,2,"<a href=\"About.php.html#2\">About<\/a>"],[0,35,"<a href=\"Alquiler.php.html#4\">Alquiler<\/a>"],[0,3,"<a href=\"Cars.php.html#2\">Cars<\/a>"],[0,40,"<a href=\"Clientes.php.html#2\">Clientes<\/a>"],[0,9,"<a href=\"Contact.php.html#8\">Contact<\/a>"],[0,6,"<a href=\"Dashboard.php.html#3\">Dashboard<\/a>"],[0,15,"<a href=\"Documentos.php.html#2\">Documentos<\/a>"],[0,14,"<a href=\"Empresa.php.html#3\">Empresa<\/a>"],[0,2,"<a href=\"Errors.php.html#2\">Errors<\/a>"],[0,9,"<a href=\"Login.php.html#2\">Login<\/a>"],[0,11,"<a href=\"Major.php.html#2\">Major<\/a>"],[0,15,"<a href=\"Marcas.php.html#2\">Marcas<\/a>"],[0,2,"<a href=\"Pricing.php.html#2\">Pricing<\/a>"],[0,27,"<a href=\"Reservas.php.html#9\">Reservas<\/a>"],[0,2,"<a href=\"Services.php.html#2\">Services<\/a>"],[0,15,"<a href=\"Tipos.php.html#2\">Tipos<\/a>"],[0,46,"<a href=\"Usuarios.php.html#2\">Usuarios<\/a>"],[0,38,"<a href=\"Vehiculos.php.html#3\">Vehiculos<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"About.php.html#4\">About::__construct<\/a>"],[0,1,"<a href=\"About.php.html#8\">About::index<\/a>"],[0,3,"<a href=\"Alquiler.php.html#6\">Alquiler::__construct<\/a>"],[0,1,"<a href=\"Alquiler.php.html#18\">Alquiler::index<\/a>"],[0,15,"<a href=\"Alquiler.php.html#25\">Alquiler::registrar<\/a>"],[0,3,"<a href=\"Alquiler.php.html#73\">Alquiler::listar<\/a>"],[0,1,"<a href=\"Alquiler.php.html#92\">Alquiler::ver<\/a>"],[0,3,"<a href=\"Alquiler.php.html#98\">Alquiler::procesar<\/a>"],[0,5,"<a href=\"Alquiler.php.html#111\">Alquiler::pdfPrestamo<\/a>"],[0,4,"<a href=\"Alquiler.php.html#191\">Alquiler::pdfAlquiler<\/a>"],[0,1,"<a href=\"Cars.php.html#4\">Cars::__construct<\/a>"],[0,1,"<a href=\"Cars.php.html#8\">Cars::index<\/a>"],[0,1,"<a href=\"Cars.php.html#17\">Cars::single<\/a>"],[0,2,"<a href=\"Clientes.php.html#3\">Clientes::__construct<\/a>"],[0,2,"<a href=\"Clientes.php.html#10\">Clientes::index<\/a>"],[0,3,"<a href=\"Clientes.php.html#17\">Clientes::listar<\/a>"],[0,10,"<a href=\"Clientes.php.html#31\">Clientes::registrar<\/a>"],[0,2,"<a href=\"Clientes.php.html#65\">Clientes::editar<\/a>"],[0,3,"<a href=\"Clientes.php.html#74\">Clientes::eliminar<\/a>"],[0,3,"<a href=\"Clientes.php.html#89\">Clientes::buscarCliente<\/a>"],[0,7,"<a href=\"Clientes.php.html#105\">Clientes::cambiarPass<\/a>"],[0,1,"<a href=\"Clientes.php.html#135\">Clientes::perfil<\/a>"],[0,7,"<a href=\"Clientes.php.html#142\">Clientes::actualizarDato<\/a>"],[0,1,"<a href=\"Contact.php.html#10\">Contact::__construct<\/a>"],[0,1,"<a href=\"Contact.php.html#15\">Contact::index<\/a>"],[0,7,"<a href=\"Contact.php.html#23\">Contact::enviarCorreo<\/a>"],[0,2,"<a href=\"Dashboard.php.html#5\">Dashboard::__construct<\/a>"],[0,2,"<a href=\"Dashboard.php.html#13\">Dashboard::index<\/a>"],[0,1,"<a href=\"Dashboard.php.html#27\">Dashboard::rentas<\/a>"],[0,1,"<a href=\"Dashboard.php.html#36\">Dashboard::rentasSemana<\/a>"],[0,3,"<a href=\"Documentos.php.html#4\">Documentos::__construct<\/a>"],[0,1,"<a href=\"Documentos.php.html#15\">Documentos::index<\/a>"],[0,2,"<a href=\"Documentos.php.html#20\">Documentos::listar<\/a>"],[0,6,"<a href=\"Documentos.php.html#31\">Documentos::registrar<\/a>"],[0,1,"<a href=\"Documentos.php.html#59\">Documentos::editar<\/a>"],[0,2,"<a href=\"Documentos.php.html#65\">Documentos::eliminar<\/a>"],[0,2,"<a href=\"Empresa.php.html#5\">Empresa::__construct<\/a>"],[0,1,"<a href=\"Empresa.php.html#13\">Empresa::index<\/a>"],[0,1,"<a href=\"Empresa.php.html#18\">Empresa::is_valid_email<\/a>"],[0,10,"<a href=\"Empresa.php.html#22\">Empresa::modificar<\/a>"],[0,1,"<a href=\"Errors.php.html#4\">Errors::__construct<\/a>"],[0,1,"<a href=\"Errors.php.html#9\">Errors::index<\/a>"],[0,1,"<a href=\"Login.php.html#4\">Login::__construct<\/a>"],[0,1,"<a href=\"Login.php.html#8\">Login::index<\/a>"],[0,7,"<a href=\"Login.php.html#14\">Login::validar<\/a>"],[0,1,"<a href=\"Major.php.html#4\">Major::__construct<\/a>"],[0,1,"<a href=\"Major.php.html#9\">Major::index<\/a>"],[0,9,"<a href=\"Major.php.html#15\">Major::verify<\/a>"],[0,3,"<a href=\"Marcas.php.html#4\">Marcas::__construct<\/a>"],[0,1,"<a href=\"Marcas.php.html#15\">Marcas::index<\/a>"],[0,2,"<a href=\"Marcas.php.html#19\">Marcas::listar<\/a>"],[0,6,"<a href=\"Marcas.php.html#30\">Marcas::registrar<\/a>"],[0,1,"<a href=\"Marcas.php.html#58\">Marcas::editar<\/a>"],[0,2,"<a href=\"Marcas.php.html#64\">Marcas::eliminar<\/a>"],[0,1,"<a href=\"Pricing.php.html#4\">Pricing::__construct<\/a>"],[0,1,"<a href=\"Pricing.php.html#8\">Pricing::index<\/a>"],[0,2,"<a href=\"Reservas.php.html#11\">Reservas::__construct<\/a>"],[0,1,"<a href=\"Reservas.php.html#20\">Reservas::index<\/a>"],[0,5,"<a href=\"Reservas.php.html#26\">Reservas::listar<\/a>"],[0,1,"<a href=\"Reservas.php.html#47\">Reservas::getVehiculo<\/a>"],[0,10,"<a href=\"Reservas.php.html#54\">Reservas::solicitar<\/a>"],[0,2,"<a href=\"Reservas.php.html#97\">Reservas::verify<\/a>"],[0,6,"<a href=\"Reservas.php.html#107\">Reservas::aprobar<\/a>"],[0,1,"<a href=\"Services.php.html#4\">Services::__construct<\/a>"],[0,1,"<a href=\"Services.php.html#8\">Services::index<\/a>"],[0,3,"<a href=\"Tipos.php.html#3\">Tipos::__construct<\/a>"],[0,1,"<a href=\"Tipos.php.html#13\">Tipos::index<\/a>"],[0,2,"<a href=\"Tipos.php.html#17\">Tipos::listar<\/a>"],[0,6,"<a href=\"Tipos.php.html#28\">Tipos::registrar<\/a>"],[0,1,"<a href=\"Tipos.php.html#56\">Tipos::editar<\/a>"],[0,2,"<a href=\"Tipos.php.html#62\">Tipos::eliminar<\/a>"],[0,3,"<a href=\"Usuarios.php.html#3\">Usuarios::__construct<\/a>"],[0,1,"<a href=\"Usuarios.php.html#13\">Usuarios::index<\/a>"],[0,2,"<a href=\"Usuarios.php.html#17\">Usuarios::listar<\/a>"],[0,13,"<a href=\"Usuarios.php.html#30\">Usuarios::registrar<\/a>"],[0,1,"<a href=\"Usuarios.php.html#77\">Usuarios::editar<\/a>"],[0,2,"<a href=\"Usuarios.php.html#83\">Usuarios::eliminar<\/a>"],[0,7,"<a href=\"Usuarios.php.html#95\">Usuarios::cambiarPass<\/a>"],[0,1,"<a href=\"Usuarios.php.html#124\">Usuarios::perfil<\/a>"],[0,14,"<a href=\"Usuarios.php.html#131\">Usuarios::actualizarDato<\/a>"],[0,1,"<a href=\"Usuarios.php.html#182\">Usuarios::salir<\/a>"],[0,1,"<a href=\"Usuarios.php.html#188\">Usuarios::is_valid_email<\/a>"],[0,3,"<a href=\"Vehiculos.php.html#5\">Vehiculos::__construct<\/a>"],[0,1,"<a href=\"Vehiculos.php.html#16\">Vehiculos::index<\/a>"],[0,2,"<a href=\"Vehiculos.php.html#22\">Vehiculos::listar<\/a>"],[0,26,"<a href=\"Vehiculos.php.html#35\">Vehiculos::registrar<\/a>"],[0,1,"<a href=\"Vehiculos.php.html#116\">Vehiculos::editar<\/a>"],[0,2,"<a href=\"Vehiculos.php.html#122\">Vehiculos::eliminar<\/a>"],[0,3,"<a href=\"Vehiculos.php.html#134\">Vehiculos::buscarVehiculo<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
