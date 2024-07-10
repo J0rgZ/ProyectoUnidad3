@@ -1,0 +1,85 @@
+name: Tarea Automatizada de ejecución de pruebas
+
+env:
+  PHP_VERSION: '8.x'
+  SONAR_ORG: 'jorge-briceno'                    # Nombre de la organización de SonarCloud
+  SONAR_PROJECT: 'jorge-briceno_proyectounidad3'       # Key ID del proyecto de SonarCloud
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  coverage:
+    name: CoverageReport
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.PHP_VERSION }}
+
+      - name: Install dependencies
+        run: composer install
+
+      - name: Run PHPUnit tests
+        run: ./vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml
+
+      - name: Upload PHPUnit coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: PHPUnit-Coverage-Report
+          path: coverage.xml
+
+      - name: Set up SonarScanner
+        run: |
+          curl -sSLo sonarscanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
+          unzip sonarscanner.zip
+          mv sonar-scanner-4.6.2.2472-linux sonar-scanner
+          export PATH="$PATH:$(pwd)/sonar-scanner/bin"
+
+      - name: Run SonarScanner
+        run: |
+          sonar-scanner \
+            -Dsonar.projectKey=${{ env.SONAR_PROJECT }} \
+            -Dsonar.organization=${{ env.SONAR_ORG }} \
+            -Dsonar.sources=. \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+            -Dsonar.php.tests.reportPath=coverage.xml
+
+  bdd:
+    name: BDDTests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.PHP_VERSION }}
+
+      - name: Install dependencies
+        run: composer install
+
+      - name: Run Behat tests
+        run: ./vendor/bin/behat --format=pretty --out=report/feature-test-results.txt
+
+      - name: Upload Behat report
+        uses: actions/upload-artifact@v4
+        with:
+          name: Behat-Report
+          path: report/feature-test-results.txt
+
+      - name: Deploy Behat report
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: bddreporte
+          publish_dir: report
