@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies
         run: composer install
 
+      - name: Set permissions for PHPUnit
+        run: chmod +x ./vendor/bin/phpunit
+
       - name: Run PHPUnit tests
         run: ./vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml
 
@@ -68,18 +71,21 @@ jobs:
       - name: Install dependencies
         run: composer install
 
-      - name: Run Behat tests
-        run: ./vendor/bin/behat --format=pretty --out=report/feature-test-results.txt
+      - name: Run Behat tests and generate HTML report
+        run: ./vendor/bin/behat --format=html --out=behat.html
 
-      - name: Upload Behat report
+      - name: Upload Behat HTML report
         uses: actions/upload-artifact@v4
         with:
-          name: Behat-Report
-          path: report/feature-test-results.txt
+          name: Behat-HTML-Report
+          path: behat.html
 
-      - name: Deploy Behat report
+      - name: Deploy Behat HTML report
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: bddreporte
-          publish_dir: report
+          publish_dir: .
+          force_orphan: true
+          keep_files: false
+          cname: behat-report
