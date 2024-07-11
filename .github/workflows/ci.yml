@@ -33,7 +33,7 @@ jobs:
         run: chmod +x vendor/bin/phpunit
 
       - name: Ejecutar pruebas con PHPUnit
-        run: vendor/bin/phpunit --configuration phpunit.xml
+        run: vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml
 
   sonar_scan:
     name: SonarQube Scan
