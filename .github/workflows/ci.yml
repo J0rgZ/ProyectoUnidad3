@@ -7,7 +7,8 @@ env:
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - "main"
   workflow_dispatch:
 
 jobs:
@@ -43,9 +44,12 @@ jobs:
       - name: Set up SonarScanner
         run: |
           curl -sSLo sonarscanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
-          unzip sonarscanner.zip
+          unzip -q sonarscanner.zip
           mv sonar-scanner-4.6.2.2472-linux sonar-scanner
           export PATH="$PATH:$(pwd)/sonar-scanner/bin"
+
+      - name: Verify SonarScanner installation
+        run: sonar-scanner -v
 
       - name: Run SonarScanner
         run: |
@@ -60,6 +64,7 @@ jobs:
   bdd:
     name: BDDTests
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out the repository
         uses: actions/checkout@v4
