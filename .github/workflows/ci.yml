@@ -32,8 +32,8 @@ jobs:
       - name: Hacer ejecutable PHPUnit
         run: chmod +x vendor/bin/phpunit
 
-      - name: Ejecutar pruebas
-        run: vendor/bin/phpunit --coverage-clover coverage.xml
+      - name: Ejecutar pruebas con PHPUnit
+        run: vendor/bin/phpunit --configuration phpunit.xml
 
   sonar_scan:
     name: SonarQube Scan
