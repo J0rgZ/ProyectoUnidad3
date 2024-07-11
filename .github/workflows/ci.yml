@@ -30,7 +30,7 @@ jobs:
         run: composer install --prefer-dist --no-progress
       
       - name: Hacer ejecutable PHPUnit
-      run: chmod +x vendor/bin/phpunit
+        run: chmod +x vendor/bin/phpunit
 
       - name: Ejecutar pruebas
         run: vendor/bin/phpunit --coverage-clover coverage.xml
