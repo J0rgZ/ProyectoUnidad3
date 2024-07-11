@@ -69,6 +69,14 @@ jobs:
       - name: Give execute permission to Behat
         run: chmod +x vendor/bin/behat
 
+      - name: Checkout del repositorio
+        uses: actions/checkout@v2
+        with:
+          path: ProyectoUnidad3
+
+      - name: Cambiar al directorio del proyecto
+        run: cd ProyectoUnidad3
+
       - name: Run Behat tests
         run: vendor/bin/behat --format=html --out=features/bootstrap/reports/index.html
 
