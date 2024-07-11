@@ -45,32 +45,37 @@ jobs:
           path: coverage.xml
       
   behat:
-  - name: Install Composer dependencies
-      run: composer install
+    name: Behat Scan
+    needs: setup_and_test
+    runs-on: ubuntu-latest
 
-    - name: Create reports directory
-      run: mkdir -p features/bootstrap/reports
+    steps:
+      - name: Install Composer dependencies
+        run: composer install
 
-    - name: Give execute permission to Behat
-      run: chmod +x vendor/bin/behat
+      - name: Create reports directory
+        run: mkdir -p features/bootstrap/reports
 
-    - name: Run Behat tests
-      run: vendor/bin/behat --format=html --out=features/bootstrap/reports/index.html
+      - name: Give execute permission to Behat
+        run: chmod +x vendor/bin/behat
 
-    - name: Upload Behat HTML report
-      if: always()
-      uses: actions/upload-artifact@v2
-      with:
-        name: behat-report
-        path: features/bootstrap/reports/index.html
+      - name: Run Behat tests
+        run: vendor/bin/behat --format=html --out=features/bootstrap/reports/index.html
 
-    - name: Deploy Behat HTML report to GitHub Pages
-      if: always()
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        personal_token: ${{ secrets.GIT_TOKEN }}
-        publish_branch: bddreporte
-        publish_dir: features/bootstrap/reports
+      - name: Upload Behat HTML report
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: behat-report
+          path: features/bootstrap/reports/index.html
+
+      - name: Deploy Behat HTML report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GIT_TOKEN }}
+          publish_branch: bddreporte
+          publish_dir: features/bootstrap/reports
 
 
   sonar_scan:
