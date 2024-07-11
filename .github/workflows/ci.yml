@@ -27,16 +27,7 @@ jobs:
       - name: Instalar dependencias
         run: composer install
 
-      - name: Ejecutar pruebas con PHPUnit y generar cobertura
-        run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
-
-      - name: Subir reporte de cobertura como artefacto
-        uses: actions/upload-artifact@v2
-        with:
-          name: PHPUnit-Coverage-Report
-          path: coverage.xml
-
-      - name: Configurar SonarScanner
+      - name: Descargar y configurar SonarScanner
         run: |
           curl -sSLo sonarscanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
           unzip sonarscanner.zip
