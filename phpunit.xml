@@ -11,9 +11,9 @@
   </testsuites>
 
   <coverage>
-    <include>
+    <source>
       <directory suffix=".php">src</directory>
-    </include>
+    </source>
     <report>
       <clover outputFile="coverage/clover.xml"/>
       <html outputFile="coverage/html"/>
