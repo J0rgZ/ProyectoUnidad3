@@ -53,6 +53,11 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v2
 
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.PHP_VERSION }}
+
         
       - name: Install Composer dependencies
         run: composer install
