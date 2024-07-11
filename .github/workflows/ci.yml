@@ -7,8 +7,7 @@ env:
 
 on:
   push:
-    branches:
-      - "main"
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -17,41 +16,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out the repository
-        uses: actions/checkout@v4
+      - name: Checkout del repositorio
+        uses: actions/checkout@v2
 
-      - name: Set up PHP
+      - name: Configurar PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.PHP_VERSION }}
 
-      - name: Install dependencies
+      - name: Instalar dependencias
         run: composer install
 
-      - name: Set permissions for PHPUnit
-        run: chmod +x ./vendor/bin/phpunit
+      - name: Ejecutar pruebas con PHPUnit y generar cobertura
+        run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
 
-      - name: Run PHPUnit tests
-        run: ./vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml --testdox --test-suffix '.php' tests/Unit
-        shell: bash
-
-      - name: Upload PHPUnit coverage report
-        uses: actions/upload-artifact@v4
+      - name: Subir reporte de cobertura como artefacto
+        uses: actions/upload-artifact@v2
         with:
           name: PHPUnit-Coverage-Report
           path: coverage.xml
 
-      - name: Set up SonarScanner
+      - name: Configurar SonarScanner
         run: |
           curl -sSLo sonarscanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
-          unzip -q sonarscanner.zip
+          unzip sonarscanner.zip
           mv sonar-scanner-4.6.2.2472-linux sonar-scanner
           export PATH="$PATH:$(pwd)/sonar-scanner/bin"
 
-      - name: Verify SonarScanner installation
-        run: sonar-scanner -v
-
-      - name: Run SonarScanner
+      - name: Ejecutar SonarScanner
         run: |
           sonar-scanner \
             -Dsonar.projectKey=${{ env.SONAR_PROJECT }} \
@@ -66,36 +58,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out the repository
-        uses: actions/checkout@v4
+      - name: Checkout del repositorio
+        uses: actions/checkout@v2
 
-      - name: Set up PHP
+      - name: Configurar PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.PHP_VERSION }}
 
-      - name: Install dependencies
+      - name: Instalar dependencias
         run: composer install
 
-      - name: Set permissions for Behat
-        run: chmod +x ./vendor/bin/behat
-
-      - name: Run Behat tests and generate HTML report
+      - name: Ejecutar pruebas con Behat y generar reporte HTML
         run: ./vendor/bin/behat --format=html --out=behat.html
 
-      - name: Upload Behat HTML report
-        uses: actions/upload-artifact@v4
+      - name: Subir reporte HTML de Behat como artefacto
+        uses: actions/upload-artifact@v2
         with:
           name: Behat-HTML-Report
           path: behat.html
 
-      - name: Deploy Behat HTML report
-        if: github.ref == 'refs/heads/bddreporte'  # Ejecutar solo si se está en la rama 'bddreporte'
+      - name: Desplegar reporte HTML de Behat en GitHub Pages
+        if: github.ref == 'refs/heads/bddreporte'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: bddreporte
           publish_dir: .
-          force_orphan: true
-          keep_files: false
-          cname: behat-report
+
+      - name: Desplegar reporte HTML de Behat en otro entorno (ejemplo)
+        if: github.ref == 'refs/heads/otroambiente'
+        run: |
+          # Comandos para desplegar en otro ambiente
+          echo "Desplegando en otro ambiente"
+
