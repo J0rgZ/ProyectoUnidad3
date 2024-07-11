@@ -65,6 +65,6 @@ jobs:
             -Dsonar.sources=. \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
-            -Dsonar.php.tests.reportPath=coverage.xml
+            -Dsonar.php.tests.reportPath=clover.xml
 
 
