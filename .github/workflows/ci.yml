@@ -1,7 +1,7 @@
 name: Tarea Automatizada de ejecución de pruebas
 
 env:
-  PHP_VERSION: '8.x'
+  PHP_VERSION: '8.2'  # Especifica una versión más precisa si es necesario
   SONAR_ORG: 'jorge-briceno'
   SONAR_PROJECT: 'jorge-briceno_proyectounidad3'
 
@@ -12,7 +12,7 @@ on:
 
 jobs:
   coverage:
-    name: CoverageReport
+    name: Coverage Report
     runs-on: ubuntu-latest
 
     steps:
@@ -23,16 +23,18 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.PHP_VERSION }}
+          extensions: mbstring, xml, ctype, iconv, intl  # Agrega las extensiones necesarias
+          coverage: xdebug  # Asegura que xdebug esté habilitado para cobertura
 
       - name: Instalar dependencias
-        run: composer install
+        run: composer install --prefer-dist --no-progress
 
       - name: Descargar y configurar SonarScanner
         run: |
           curl -sSLo sonarscanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip
           unzip sonarscanner.zip
           mv sonar-scanner-4.6.2.2472-linux sonar-scanner
-          export PATH="$PATH:$(pwd)/sonar-scanner/bin"
+          echo "PATH=$PATH:$(pwd)/sonar-scanner/bin" >> $GITHUB_ENV
 
       - name: Ejecutar SonarScanner
         run: |
@@ -45,7 +47,7 @@ jobs:
             -Dsonar.php.tests.reportPath=coverage.xml
 
   bdd:
-    name: BDDTests
+    name: BDD Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -58,7 +60,7 @@ jobs:
           php-version: ${{ env.PHP_VERSION }}
 
       - name: Instalar dependencias
-        run: composer install
+        run: composer install --prefer-dist --no-progress
 
       - name: Ejecutar pruebas con Behat y generar reporte HTML
         run: ./vendor/bin/behat --format=html --out=behat.html
@@ -82,4 +84,7 @@ jobs:
         run: |
           # Comandos para desplegar en otro ambiente
           echo "Desplegando en otro ambiente"
+
+
+
 
