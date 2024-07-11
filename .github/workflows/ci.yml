@@ -2,8 +2,8 @@ name: Tarea Automatizada de ejecución de pruebas
 
 env:
   PHP_VERSION: '8.x'
-  SONAR_ORG: 'jorge-briceno'                    # Nombre de la organización de SonarCloud
-  SONAR_PROJECT: 'jorge-briceno_proyectounidad3'       # Key ID del proyecto de SonarCloud
+  SONAR_ORG: 'jorge-briceno'
+  SONAR_PROJECT: 'jorge-briceno_proyectounidad3'
 
 on:
   push:
@@ -31,7 +31,8 @@ jobs:
         run: chmod +x ./vendor/bin/phpunit
 
       - name: Run PHPUnit tests
-        run: ./vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml
+        run: ./vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml --testdox --test-suffix '.php'
+        shell: bash
 
       - name: Upload PHPUnit coverage report
         uses: actions/upload-artifact@v4
@@ -70,6 +71,9 @@ jobs:
 
       - name: Install dependencies
         run: composer install
+
+      - name: Set permissions for Behat
+        run: chmod +x ./vendor/bin/behat
 
       - name: Run Behat tests and generate HTML report
         run: ./vendor/bin/behat --format=html --out=behat.html
