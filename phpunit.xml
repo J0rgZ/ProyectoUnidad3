@@ -11,12 +11,13 @@
     </testsuite>
   </testsuites>
   <!-- Configuración para generar reportes de cobertura -->
-  <coverage processUncoveredFiles="true">
-    <include>
-      <directory suffix=".php">src</directory>
-    </include>
-    <report>
-      <clover outputFile="coverage.xml"/>
-    </report>
+  <coverage includeUncoveredFiles="true" processUncoveredFiles="true">
+      <include>
+          <directory suffix=".php">src</directory>
+      </include>
+      <report>
+          <clover outputFile="coverage/clover.xml"/>
+          <html outputFile="coverage/html"/>
+      </report>
   </coverage>
 </phpunit>
