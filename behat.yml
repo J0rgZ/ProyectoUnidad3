@@ -5,6 +5,8 @@ default:
         - "%paths.base%/features"
       contexts:
         - FeatureContext
+  autoload:
+    - '%paths.base%/features/bootstrap'
   extensions:
     emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
       name: html
