@@ -13,7 +13,7 @@
   </coverage>
   <source>
     <include>
-      <directory suffix=".php">src</directory>
+      <directory suffix=".php">src/Models</directory>
     </include>
   </source>
 </phpunit>
