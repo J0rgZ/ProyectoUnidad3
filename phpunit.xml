@@ -3,22 +3,23 @@
          xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.2/phpunit.xsd"
          backupGlobals="false"
          colors="true"
-         bootstrap="vendor/autoload.php"
-         cacheDirectory=".phpunit.cache">
+         bootstrap="vendor/autoload.php">
   <!-- Configuración de los directorios de pruebas -->
   <testsuites>
     <testsuite name="Unit Tests">
       <directory suffix="Test.php">tests/Unit</directory>
     </testsuite>
+    <testsuite name="Feature Tests">
+      <directory suffix="Test.php">tests/Feature</directory>
+    </testsuite>
   </testsuites>
   <!-- Configuración para generar reportes de cobertura -->
-  <coverage cacheDirectory=".phpunit.cache/coverage">
+  <coverage processUncoveredFiles="true">
     <include>
       <directory suffix=".php">src</directory>
     </include>
     <report>
-      <clover outputFile="coverage/clover.xml"/>
-      <html outputFile="coverage/html"/>
+      <clover outputFile="coverage.xml"/>
     </report>
   </coverage>
 </phpunit>
