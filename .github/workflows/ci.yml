@@ -44,7 +44,34 @@ jobs:
           name: coverage
           path: coverage.xml
       
-      
+  behat:
+  - name: Install Composer dependencies
+      run: composer install
+
+    - name: Create reports directory
+      run: mkdir -p features/bootstrap/reports
+
+    - name: Give execute permission to Behat
+      run: chmod +x vendor/bin/behat
+
+    - name: Run Behat tests
+      run: vendor/bin/behat --format=html --out=features/bootstrap/reports/index.html
+
+    - name: Upload Behat HTML report
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: behat-report
+        path: features/bootstrap/reports/index.html
+
+    - name: Deploy Behat HTML report to GitHub Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.GIT_TOKEN }}
+        publish_branch: bddreporte
+        publish_dir: features/bootstrap/reports
+
 
   sonar_scan:
     name: SonarQube Scan

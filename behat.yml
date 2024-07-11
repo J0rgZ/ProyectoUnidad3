@@ -1,21 +1,22 @@
 default:
   suites:
     default:
-      name: "BDD Features"
       paths:
-        - '%paths.base%/features'
+        - "%paths.base%/features"
       contexts:
-        - FeatureContext
+        - ClienteContext
+        - PermisosContext
+        - ProductosContext
+        - RolesContext
+        - UsuariosContext
+        - VentasContext
+  # formatters:
+  #   junit:
+      # output_path: "build/junit"
   extensions:
-    Behat\MinkExtension:
-      base_url: 'https://j0rgz.github.io/ProyectoUnidad3/'
-      default_session: goutte
-      sessions:
-        goutte:
-          goutte: ~
     emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
       name: html
-      renderer: Twig,Behat2
+      renderer: "Twig,Behat2"
       file_name: index
       print_args: true
       print_outp: true
