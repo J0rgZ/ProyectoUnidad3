@@ -85,8 +85,8 @@ jobs:
           path: behat.html
 
       - name: Deploy Behat HTML report
-        uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/bddreporte'  # Ejecutar solo si se está en la rama 'bddreporte'
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: bddreporte
