@@ -35,6 +35,17 @@ jobs:
       - name: Ejecutar pruebas con PHPUnit
         run: vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml
 
+      - name: Check coverage file
+        run: ls -l coverage.xml
+      
+      - name: Upload coverage
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage.xml
+      
+      
+
   sonar_scan:
     name: SonarQube Scan
     needs: setup_and_test
@@ -56,15 +67,18 @@ jobs:
           unzip sonarscanner.zip
           mv sonar-scanner-5.0.1.3006-linux sonar-scanner
           echo "PATH=$PATH:$(pwd)/sonar-scanner/bin" >> $GITHUB_ENV
+      
+      - name: Download coverage
+        uses: actions/download-artifact@v2
+        with:
+          name: coverage
 
       - name: Run SonarScanner
         run: |
-          sonar-scanner \
+          sonar-scanner -X \
             -Dsonar.projectKey=${{ env.SONAR_PROJECT }} \
             -Dsonar.organization=${{ env.SONAR_ORG }} \
             -Dsonar.sources=. \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
-            -Dsonar.php.tests.reportPath=clover.xml
-
-
+            -Dsonar.php.coverage.reportPaths=coverage.xml
