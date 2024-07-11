@@ -50,8 +50,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v2
+
+        
       - name: Install Composer dependencies
         run: composer install
+        working-directory: .
 
       - name: Create reports directory
         run: mkdir -p features/bootstrap/reports

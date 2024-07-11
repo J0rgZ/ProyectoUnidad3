@@ -4,15 +4,7 @@ default:
       paths:
         - "%paths.base%/features"
       contexts:
-        - ClienteContext
-        - PermisosContext
-        - ProductosContext
-        - RolesContext
-        - UsuariosContext
-        - VentasContext
-  # formatters:
-  #   junit:
-      # output_path: "build/junit"
+        - FeatureContext.php
   extensions:
     emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
       name: html
