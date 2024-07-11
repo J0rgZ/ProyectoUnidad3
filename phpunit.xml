@@ -1,22 +1,19 @@
 <?xml version="1.0"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.2/phpunit.xsd"
-         backupGlobals="false"
-         colors="true"
-         bootstrap="vendor/autoload.php">
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.2/phpunit.xsd" backupGlobals="false" colors="true" bootstrap="vendor/autoload.php">
   <testsuites>
     <testsuite name="Unit Tests">
       <directory suffix="Test.php">tests/Unit</directory>
     </testsuite>
   </testsuites>
-
   <coverage>
-    <include>
-      <directory suffix=".php">src</directory>
-    </include>
     <report>
       <clover outputFile="coverage/clover.xml"/>
       <html outputDirectory="coverage/html"/>
     </report>
   </coverage>
+  <source>
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+  </source>
 </phpunit>
