@@ -8,6 +8,7 @@ default:
         - FeatureContext
   extensions:
     Behat\MinkExtension:
+      base_url: 'https://j0rgz.github.io/ProyectoUnidad3/'
       default_session: goutte
       sessions:
         goutte:
