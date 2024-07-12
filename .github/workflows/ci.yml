@@ -33,16 +33,16 @@ jobs:
         run: chmod +x vendor/bin/phpunit
 
       - name: Ejecutar pruebas con PHPUnit
-        run: vendor/bin/phpunit --configuration phpunit.xml --coverage-html coverage-report
+        run: vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml
 
-      - name: Check coverage report
-        run: ls -l coverage-report
-
+      - name: Check coverage file
+        run: ls -l coverage.xml
+      
       - name: Upload coverage
         uses: actions/upload-artifact@v2
         with:
           name: coverage
-          path: coverage-report
+          path: coverage.xml
 
       - name: Create reports directory
         run: mkdir -p features/bootstrap/reports
@@ -68,13 +68,6 @@ jobs:
           publish_branch: bddreporte
           publish_dir: features/bootstrap/reports
 
-      - name: Deploy coverage report to cvgreporte branch
-        if: always()
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.GIT_TOKEN }}
-          publish_branch: cvgreporte
-          publish_dir: coverage-report
 
   sonar_scan:
     name: SonarQube Scan
@@ -111,4 +104,4 @@ jobs:
             -Dsonar.sources=. \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
-            -Dsonar.php.coverage.reportPaths=coverage-report/coverage.xml
+            -Dsonar.php.coverage.reportPaths=coverage.xml
