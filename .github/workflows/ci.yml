@@ -46,19 +46,12 @@ jobs:
 
       - name: Create reports directory
         run: mkdir -p features/bootstrap/reports
-        working-directory: .
-
-      - name: Mockery
-        run: composer require --dev mockery/mockery
-        working-directory: .
-
+        
       - name: Give execute permission to Behat
         run: chmod +x vendor/bin/behat
-        working-directory: .
-
+    
       - name: Run Behat tests
         run: vendor/bin/behat --format=html --out features/bootstrap/reports/index.html
-        working-directory: .
 
       - name: Upload Behat HTML report
         if: always()
