@@ -2,11 +2,11 @@ default:
   suites:
     default:
       paths:
-        - "%paths.base%/features"
+        - features
       contexts:
         - FeatureContext
   autoload:
-    - '%paths.base%/features/bootstrap'
+    - features/bootstrap
   extensions:
     emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
       name: html
