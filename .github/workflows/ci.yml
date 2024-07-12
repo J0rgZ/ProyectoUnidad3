@@ -49,7 +49,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    
+      - name: Regresar un paso
+        uses: cd ..
+
+      - name: Debug Composer
+        run: |
+          pwd
+          ls -la
+          composer diagnose
+
+      - name: Checkout del repositorio
+        uses: actions/checkout@v2
+
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
