@@ -50,7 +50,7 @@ jobs:
 
     steps:
       - name: Regresar un paso
-        uses: cd ..
+        run: cd ..
 
       - name: Debug Composer
         run: |
