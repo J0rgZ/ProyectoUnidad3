@@ -68,6 +68,13 @@ jobs:
           publish_branch: bddreporte
           publish_dir: features/bootstrap/reports
 
+      - name: Deploy coverage report to cvgreporte branch
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GIT_TOKEN }}
+          publish_branch: cvgreporte
+          publish_dir: .
 
   sonar_scan:
     name: SonarQube Scan
