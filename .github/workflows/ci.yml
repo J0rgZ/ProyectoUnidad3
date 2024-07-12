@@ -70,11 +70,15 @@ jobs:
 
       - name: Deploy coverage report to cvgreporte branch
         if: always()
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.GIT_TOKEN }}
-          publish_branch: cvgreporte
-          publish_dir: coverage-report
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git fetch origin cvgreporte:cvgreporte
+          git switch cvgreporte
+          cp -r coverage-report/* .
+          git add .
+          git commit --amend --no-edit
+          git push origin cvgreporte --force
 
   sonar_scan:
     name: SonarQube Scan
