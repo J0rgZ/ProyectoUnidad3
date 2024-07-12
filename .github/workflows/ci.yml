@@ -48,6 +48,10 @@ jobs:
         run: mkdir -p features/bootstrap/reports
         working-directory: .
 
+      - name: Mockery
+        run: composer require --dev mockery/mockery
+        working-directory: .
+
       - name: Give execute permission to Behat
         run: chmod +x vendor/bin/behat
         working-directory: .
