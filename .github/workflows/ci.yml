@@ -71,8 +71,8 @@ jobs:
         working-directory: .
 
       - name: Run Behat tests
-        run: vendor/bin/behat --format=html --out=features/bootstrap/reports/index.html
-        working-directory: ../
+        run: vendor/bin/behat --format=html --out features/bootstrap/reports/index.html
+        working-directory: .
 
       - name: Upload Behat HTML report
         if: always()
