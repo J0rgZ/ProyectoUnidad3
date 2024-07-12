@@ -580,37 +580,6 @@
                 </ul>
                 <h3>
                     <span class="keyword"> Scenario: </span>
-                    <span class="title">Verificar inicio de sesión fallido con contraseña incorrecta para usuario admin</span>
-                </h3>
-                <ol>
-                    <li class="passed">
-                        <div class="step">
-                            <span class="keyword">Given </span>
-                            <span class="text">que tengo un usuario con correo &quot;admin@example.com&quot; en la tabla &quot;usuarios&quot; </span>
-                            <span class="path">FeatureContext::queTengoUnUsuarioConCorreoEnLaTabla()</span>
-                        </div>
-                    </li>
-                    <li class="passed">
-                        <div class="step">
-                            <span class="keyword">When </span>
-                            <span class="text">verifico el inicio de sesi&oacute;n con correo electr&oacute;nico &quot;admin@example.com&quot; y contrase&ntilde;a &quot;hashed&quot; </span>
-                            <span class="path">FeatureContext::verificoElInicioDeSesionConCorreoYContrasena()</span>
-                        </div>
-                    </li>
-                    <li class="passed">
-                        <div class="step">
-                            <span class="keyword">Then </span>
-                            <span class="text">deber&iacute;a obtener un resultado fallido de verificaci&oacute;n de inicio de sesi&oacute;n </span>
-                            <span class="path">FeatureContext::deberiaObtenerUnResultadoFallidoDeVerificacionDeInicioDeSesion()</span>
-                        </div>
-                    </li>
-                </ol>
-            </div>
-            <div class="scenario">
-                <ul class="tags">
-                </ul>
-                <h3>
-                    <span class="keyword"> Scenario: </span>
                     <span class="title">Verificar inicio de sesión fallido con contraseña incorrecta para usuario ana</span>
                 </h3>
                 <ol>
@@ -679,7 +648,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Automated test report - 12/07/2024 01:10:21</a>
+            <a class="navbar-brand" href="#">Automated test report - 12/07/2024 01:20:58</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -705,7 +674,7 @@
                 <canvas id="chart-scenarios" width="300" height="300"/>
             </div>
             <div class="chart-summary title">
-                9
+                8
                 Scenarios:
             </div>
             <div class="chart-summary failed">0 failed</div>
@@ -717,7 +686,7 @@
                 <canvas id="chart-steps" width="300" height="300"/>
             </div>
             <div class="chart-summary title">
-                27
+                24
                 Steps:
             </div>
             <div class="chart-summary failed">0 failed</div>
@@ -1143,36 +1112,6 @@
                                            href="#scenario-3-3"
                                            aria-expanded="true"
                                            aria-controls="scenario-3-3">
-                                            Scenario: Verificar inicio de sesión fallido con contraseña incorrecta para usuario admin
-                                        </a>
-
-                                        <div class="tags pull-right">
-                                                                                                                                </div>
-                                    </h4>
-                                </div>
-                                <div id="scenario-3-3" class="panel-collapse collapse in"
-                                     role="tabpanel"
-                                     aria-labelledby="headingOne">
-                                    <ul class="list-group">
-                                                                                    <li class="list-group-item alert alert-success">
-                                                <b>Given</b> que tengo un usuario con correo &quot;admin@example.com&quot; en la tabla &quot;usuarios&quot;
-                                                                                                                                                                                                                                                                                                                                                </li>
-                                                                                                                                                                                                                        <li class="list-group-item alert alert-success">
-                                                <b>When</b> verifico el inicio de sesión con correo electrónico &quot;admin@example.com&quot; y contraseña &quot;hashed&quot;
-                                                                                                                                                                                                                                                                                                                                                </li>
-                                                                                                                                                                                                                        <li class="list-group-item alert alert-success">
-                                                <b>Then</b> debería obtener un resultado fallido de verificación de inicio de sesión
-                                                                                                                                                                                                                                                                                                                                                </li>
-                                                                                                                                                                                                                </ul>
-                                </div>
-                            </div>
-                                                    <div class="panel panel-default passed">
-                                <div class="panel-heading" role="tab">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion"
-                                           href="#scenario-3-4"
-                                           aria-expanded="true"
-                                           aria-controls="scenario-3-4">
                                             Scenario: Verificar inicio de sesión fallido con contraseña incorrecta para usuario ana
                                         </a>
 
@@ -1180,7 +1119,7 @@
                                                                                                                                 </div>
                                     </h4>
                                 </div>
-                                <div id="scenario-3-4" class="panel-collapse collapse in"
+                                <div id="scenario-3-3" class="panel-collapse collapse in"
                                      role="tabpanel"
                                      aria-labelledby="headingOne">
                                     <ul class="list-group">
@@ -1221,14 +1160,14 @@
         new Chart(scenarioChart, {type: 'doughnut', options: {legend: {display: false}}, data: {
                 labels: ['Failed', 'Pending', 'Passed'],
                 datasets: [{
-                    data: [0, 0, 9],
+                    data: [0, 0, 8],
                     backgroundColor: ['#F7464A', 'e38d13', '#00a65a'],
                 }],
             }});
         new Chart(stepChart, {type: 'doughnut', options: {legend: {display: false}}, data: {
                 labels: ['Failed','Passed'],
                 datasets: [{
-                    data: [0, 27],
+                    data: [0, 24],
                     backgroundColor: ["#F7464A", "#00a65a"],
                 }],
             }});
@@ -1293,13 +1232,13 @@
                     3 features ( <strong class="passed">3 success</strong> )
                 </p>
                 <p class="scenarios">
-                    9 scenarios ( <strong class="passed">9 success</strong> )
+                    8 scenarios ( <strong class="passed">8 success</strong> )
                 </p>
                 <p class="steps">
-                    27 steps ( <strong class="passed">27 success</strong> )
+                    24 steps ( <strong class="passed">24 success</strong> )
                 </p>
                 <p class="time">
-                0m0.04s - 14.52Mb
+                0m0.03s - 14.51Mb
                 </p>
             </div>
             <div class="switchers">
