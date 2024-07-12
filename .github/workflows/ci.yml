@@ -46,7 +46,6 @@ jobs:
       
   behat:
     name: Behat Scan
-    needs: setup_and_test
     runs-on: ubuntu-latest
 
     steps:
