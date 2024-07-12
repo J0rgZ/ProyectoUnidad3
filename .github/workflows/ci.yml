@@ -43,34 +43,6 @@ jobs:
         with:
           name: coverage
           path: coverage.xml
-      
-  behat:
-    name: Behat Scan
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Regresar un paso
-        run: cd /home/runner/work/ProyectoUnidad3/
-
-      - name: Debug Composer
-        run: |
-          pwd
-          ls -la
-
-      - name: Checkout del repositorio
-        uses: actions/checkout@v2
-
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ env.PHP_VERSION }}
-
-      - name: Install Composer dependencies
-        run: composer install
-        working-directory: .
-
-      - name: Verificar
-        run: composer fund
 
       - name: Create reports directory
         run: mkdir -p features/bootstrap/reports
