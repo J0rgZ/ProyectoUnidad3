@@ -49,9 +49,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout del repositorio
-        uses: actions/checkout@v2
-
+    
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
