@@ -16,21 +16,20 @@ class Query
 
     protected function getConnection(): PDO
     {
-        $host = 'localhost';
-        $dbname = 'alquiler';
-        $username = 'root';
-        $password = '';
+        $host = getenv('DB_HOST') ?: 'localhost';
+        $dbname = getenv('DB_NAME') ?: 'alquiler';
+        $username = getenv('DB_USER') ?: 'root';
+        $password = getenv('DB_PASSWORD') ?: '';
         $charset = 'utf8mb4';
 
         $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
-
         try {
             $pdo = new PDO($dsn, $username, $password);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
             return $pdo;
         } catch (PDOException $e) {
-            exit("Error de conexión: " . $e->getMessage());
+            // It's a good practice to handle exceptions and not expose sensitive error details
+            throw new Exception("Database connection error: " . $e->getMessage());
         }
     }
 
