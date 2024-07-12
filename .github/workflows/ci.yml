@@ -1,13 +1,13 @@
 name: Tarea Automatizada de ejecución de pruebas
 
 env:
-  PHP_VERSION: '8.2'  # Asegúrate de que es la versión de PHP que necesitas
+  PHP_VERSION: '8.2'
   SONAR_ORG: 'jorge-briceno'
   SONAR_PROJECT: 'jorge-briceno_proyectounidad3'
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
@@ -23,21 +23,21 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.PHP_VERSION }}
-          extensions: mbstring, xml, ctype, iconv, intl  # Ajusta según las necesidades de tu proyecto
+          extensions: mbstring, xml, ctype, iconv, intl
           coverage: xdebug
 
       - name: Instalar dependencias
         run: composer install --prefer-dist --no-progress
-      
+
       - name: Hacer ejecutable PHPUnit
         run: chmod +x vendor/bin/phpunit
 
       - name: Ejecutar pruebas con PHPUnit
-        run: vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml
+        run: vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml --coverage-html coverage-report
 
-      - name: Check coverage file
-        run: ls -l coverage.xml
-      
+      - name: Check coverage report
+        run: ls -l coverage-report
+
       - name: Upload coverage
         uses: actions/upload-artifact@v2
         with:
@@ -46,10 +46,10 @@ jobs:
 
       - name: Create reports directory
         run: mkdir -p features/bootstrap/reports
-        
+
       - name: Give execute permission to Behat
         run: chmod +x vendor/bin/behat
-    
+
       - name: Run Behat tests
         run: vendor/bin/behat --format=html --out features/bootstrap/reports/index.html
 
@@ -68,6 +68,13 @@ jobs:
           publish_branch: bddreporte
           publish_dir: features/bootstrap/reports
 
+      - name: Deploy coverage report to cvgreporte branch
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GIT_TOKEN }}
+          publish_branch: cvgreporte
+          publish_dir: coverage-report
 
   sonar_scan:
     name: SonarQube Scan
@@ -90,7 +97,7 @@ jobs:
           unzip sonarscanner.zip
           mv sonar-scanner-5.0.1.3006-linux sonar-scanner
           echo "PATH=$PATH:$(pwd)/sonar-scanner/bin" >> $GITHUB_ENV
-      
+
       - name: Download coverage
         uses: actions/download-artifact@v2
         with:
@@ -98,7 +105,7 @@ jobs:
 
       - name: Run SonarScanner
         run: |
-          sonar-scanner -X \
+          sonar-scanner \
             -Dsonar.projectKey=${{ env.SONAR_PROJECT }} \
             -Dsonar.organization=${{ env.SONAR_ORG }} \
             -Dsonar.sources=. \
