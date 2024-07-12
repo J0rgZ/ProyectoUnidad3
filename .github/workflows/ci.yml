@@ -52,36 +52,40 @@ jobs:
     steps:
       - name: Checkout del repositorio
         uses: actions/checkout@v2
-        with:
-          path: ProyectoUnidad3  # Asegúrate de que todo se clona en el directorio correcto desde el principio
 
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ env.PHP_VERSION }}
 
+        
       - name: Install Composer dependencies
         run: composer install
-        working-directory: ProyectoUnidad3
+        working-directory: ../
 
       - name: Create reports directory
         run: mkdir -p features/bootstrap/reports
-        working-directory: ProyectoUnidad3
 
       - name: Give execute permission to Behat
         run: chmod +x vendor/bin/behat
-        working-directory: ProyectoUnidad3
+
+      - name: Checkout del repositorio
+        uses: actions/checkout@v2
+        with:
+          path: ProyectoUnidad3
+
+      - name: Cambiar al directorio del proyecto
+        run: cd ProyectoUnidad3
 
       - name: Run Behat tests
         run: vendor/bin/behat --format=html --out=features/bootstrap/reports/index.html
-        working-directory: ProyectoUnidad3
 
       - name: Upload Behat HTML report
         if: always()
         uses: actions/upload-artifact@v2
         with:
           name: behat-report
-          path: ProyectoUnidad3/features/bootstrap/reports/index.html
+          path: features/bootstrap/reports/index.html
 
       - name: Deploy Behat HTML report to GitHub Pages
         if: always()
@@ -89,7 +93,7 @@ jobs:
         with:
           personal_token: ${{ secrets.GIT_TOKEN }}
           publish_branch: bddreporte
-          publish_dir: ProyectoUnidad3/features/bootstrap/reports
+          publish_dir: features/bootstrap/reports
 
 
   sonar_scan:
