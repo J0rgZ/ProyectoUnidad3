@@ -50,13 +50,12 @@ jobs:
 
     steps:
       - name: Regresar un paso
-        run: cd ..
+        run: cd /home/runner/work/ProyectoUnidad3/
 
       - name: Debug Composer
         run: |
           pwd
           ls -la
-          composer diagnose
 
       - name: Checkout del repositorio
         uses: actions/checkout@v2
